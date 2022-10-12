@@ -10,7 +10,6 @@ function Picture({ src }) {
         margin-bottom: 4px;
         border: 4px solid #fff;
     `;
-    const Image = styled.img``;
 
     return (
         <List theme={{src: src}}></List>

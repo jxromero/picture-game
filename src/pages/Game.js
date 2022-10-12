@@ -23,7 +23,7 @@ function Game() {
     const [item, setItem] = useState(items[next]);
     const [show, setShow] = useState(false);
     const [timer, setTimer] = useState(seconds);
-    const { addUserPoint, subtractUserPoint, sortUser } = bindActionCreators(usersAction, useDispatch());
+    const { addUserPoint, subtractUserPoint } = bindActionCreators(usersAction, useDispatch());
     const users = useSelector((state) => state.users);
 
     useEffect(() => {
@@ -69,7 +69,7 @@ function Game() {
                 <Main>
                     <ButtonCounter>
                         <Timer bgColor={timer <= 5 ? '#e92438' : '#66c8af'}>{timer}</Timer>
-                        <NextButton display={timer == 0 ? 'block' : 'none'} onClick={handleNext} disabled={!show}>Next</NextButton>
+                        <NextButton display={timer === 0 ? 'block' : 'none'} onClick={handleNext} disabled={!show}>Next</NextButton>
                     </ButtonCounter>
                     <Pictures pictures={item.pictures} />
                     <HandleAnswer />

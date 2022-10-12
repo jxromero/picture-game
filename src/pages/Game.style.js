@@ -54,7 +54,7 @@ export const LetterBox = styled.span`
     color: white;
     text-align: center;
     font-size: ${props => (props.theme.wordLength > 8) ? '35px' : '40px'};
-    background: ${props => (props.theme.letter == ' ') ? '#fff' : 'transparent'};
+    background: ${props => (props.theme.letter === ' ') ? '#fff' : 'transparent'};
 `;
 
 export const ScoreButton = styled.button`
